@@ -1,0 +1,10 @@
+{
+    "model_type": "LSTM",
+    "architecture": "Embedding + LSTM + Linear",
+    "attention": false,
+    "max_prefix_length": 15,
+    "num_cases_used": 3000,
+    "task": "Next Activity Prediction",
+    "dataset": "BPI Challenge 2017"
+  }
+  

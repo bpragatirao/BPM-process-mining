@@ -6,7 +6,6 @@ import torch.optim as optim
 from src.model_lstm import LSTMNextActivity
 from src.model_attention import AttentionLSTM
 
-
 def train_attention_model(X_train, y_train, vocab_size, epochs=5, batch_size=64):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -48,6 +47,11 @@ def train_attention_model(X_train, y_train, vocab_size, epochs=5, batch_size=64)
             f"Loss: {total_loss:.4f} | Acc: {acc:.4f}"
         )
 
+        print("Training baseline Attention based LSTM ...")
+        torch.save(model.state_dict(), "outputs/models/attention_lstm/model.pt")
+        print("Model saved to output/models/lstm_baseline.pt")
+        print()
+        print()
     return model
 
 
@@ -95,5 +99,11 @@ def train_lstm(X_train, y_train, vocab_size, epochs=5, batch_size=64):
             f"Loss: {total_loss:.4f} | "
             f"Accuracy: {acc:.4f}"
         )
+
+        print("Training baseline LSTM ...")
+        torch.save(model.state_dict(), "outputs/models/baseline_lstm/model.pt")
+        print("Model saved to output/models/lstm_baseline.pt")
+        print()
+        print()
 
     return model

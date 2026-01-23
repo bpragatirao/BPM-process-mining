@@ -2,18 +2,6 @@ import pandas as pd
 from sklearn.preprocessing import LabelEncoder
 
 def generate_prefixes(df, max_prefix_length = 15, max_cases=3000):
-    """
-    Convert an event log DataFrame into
-    prefix-label training samples.
-
-    Input:
-        df: DataFrame with columns
-            [case_id, activity, timestamp]
-
-    Output:
-        X: list of activity prefixes
-        y: list of next-activity labels
-    """
 
     X = []  
     y = []  
@@ -50,9 +38,6 @@ def generate_prefixes(df, max_prefix_length = 15, max_cases=3000):
     return X, y
 
 def encode_and_pad(prefixes, labels, max_prefix_length=15):
-    """
-    Encode activities as integers and pad prefixes.
-    """
 
     all_activities = [a for p in prefixes for a in p] + labels
 
@@ -71,10 +56,6 @@ def encode_and_pad(prefixes, labels, max_prefix_length=15):
 
 
 def run_preprocessing(input_csv):
-    """
-    End-to-end preprocessing pipeline:
-    raw CSV -> processed CSVs
-    """
 
     print("Loading data...")
     df = pd.read_csv(input_csv)
