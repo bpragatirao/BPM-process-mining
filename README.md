@@ -82,44 +82,44 @@ python main.py
 Predictive-BPM/
 │
 ├── data/
-│   ├── raw/
-│   │   └── BPI_Challenges_2017.xes
-│   │
-│   └── processed/
-│       ├── sequences.csv
-│       └── labels.csv
+│ ├── raw/
+│ │ └── BPI_Challenges_2017.xes
+│ │
+│ └── processed/
+│ ├── sequences.csv
+│ └── labels.csv
 │
 ├── src/
-│   ├── data_loader.py
-│   ├── preprocessing.py
-│   ├── dataset.py
-│   ├── train.py
-│   ├── evaluate.py
-│   ├── visualize_attention.py
-│   └── __init__.py
+│ ├── data_loader.py
+│ ├── preprocessing.py
+│ ├── dataset.py
+│ ├── train.py
+│ ├── evaluate.py
+│ ├── visualize_attention.py
+│ └── init.py
 │
 ├── notebooks/
-│   ├── 01_data_exploration.ipynb
-│   ├── 02_preprocessing_validation.ipynb
-│   └── 03_model_analysis.ipynb
+│ ├── 01_data_exploration.ipynb
+│ ├── 02_preprocessing_validation.ipynb
+│ └── 03_model_analysis.ipynb
 │
 ├── outputs/
-│   ├── models/
-│   │   ├── baseline_lstm/
-│   │   │   ├── model.pt
-│   │   │   └── training_summary.csv
-│   │   │
-│   │   ├── attention_lstm/
-│   │   │   ├── model.pt
-│   │   │   └── training_summary.csv
-│   │   │
-│   │   └── comparison.csv
-│   │
-│   ├── plots/
-│   │   └── attention_weights.png
-│   │
-│   └── results/
-│       └── evaluation_metrics.csv
+│ ├── models/
+│ │ ├── baseline_lstm/
+│ │ │ ├── model.pt
+│ │ │ └── training_summary.csv
+│ │ │
+│ │ ├── attention_lstm/
+│ │ │ ├── model.pt
+│ │ │ └── training_summary.csv
+│ │ │
+│ │ └── comparison.csv
+│ │
+│ ├── plots/
+│ │ └── attention_weights.png
+│ │
+│ └── results/
+│ └── evaluation_metrics.csv
 │
 ├── main.py
 ├── requirements.txt
