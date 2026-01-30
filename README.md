@@ -41,8 +41,8 @@ Follow the steps below to prepare your environment and run the application.
 Extract your data files into the project directory to ensure the script can access the necessary input.
 
 ```bash
-unzip BPI Challenges 2017.xes.zip -d ./data
-unzip BPI_Challenges_2017.csv.zip -d ./data
+unzip BPI Challenges 2017.xes.zip -d ./data/raw
+unzip BPI_Challenges_2017.csv.zip -d ./data/raw
 ```
 ### 2. Configure the Virtual Environment
 Create and activate a virtual environment to keep your dependencies isolated.
